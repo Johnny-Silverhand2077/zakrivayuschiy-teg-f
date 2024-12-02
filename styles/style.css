@@ -11,6 +11,43 @@
 */
 
 .page {
+  padding-block-start: 100px;
+  font-family: var(--page-main-font-family, "inter", sans-serif);
+  font-variation-settings: "wght" var(--page-main-font-weight, 400);
   min-inline-size: 320px;
   min-block-size: 100dvb;
+}
+
+.header { 
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.card { 
+margin-inline: auto;
+border: 2px solid #000;
+padding-inline: clamp(0.875rem, -1.469rem + 10vw, 7.531rem);
+padding-block: clamp(7.5rem, 7.324rem + 0.751vw, 8rem);
+max-inline-size: 696px;
+
+}
+
+.page_header { 
+margin-block-end: 100px;
+}
+
+.header_title {
+  display: grid;
+  gap: 20px; 
+  text-align: center;
+  font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
+} 
+
+
+.header_subtitle { 
+  font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
 }
