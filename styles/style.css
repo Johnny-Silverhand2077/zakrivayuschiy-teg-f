@@ -18,7 +18,7 @@
   min-block-size: 100dvb;
 }
 
-.header { 
+.header {
   display: grid;
   justify-content: center;
   justify-items: center;
@@ -27,27 +27,126 @@
   text-transform: uppercase;
 }
 
-.card { 
-margin-inline: auto;
-border: 2px solid #000;
-padding-inline: clamp(0.875rem, -1.469rem + 10vw, 7.531rem);
-padding-block: clamp(7.5rem, 7.324rem + 0.751vw, 8rem);
-max-inline-size: 696px;
-
+.page_header {
+  margin-block-end: 100px;
 }
 
-.page_header { 
-margin-block-end: 100px;
+.card {
+  margin-inline: auto;
+  border: 2px solid #000;
+  max-inline-size: 696px;
 }
 
 .header_title {
   display: grid;
-  gap: 20px; 
+  gap: 20px;
   text-align: center;
   font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
-} 
+  margin-block: clamp(7.5rem, 7.324rem + 0.751vw, 8rem);
+}
 
-
-.header_subtitle { 
+.header_subtitle {
   font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
+}
+
+.main {
+  display: grid;
+  justify-content: center;
+  gap: 57px;
+  padding-block-end: 105px;
+}
+
+.cards__list {
+  display: grid;
+  gap: 50px;
+}
+
+.card__header { 
+ border-block-end: 2px solid #000;
+ padding: 4px 10px;
+
+ }
+
+.card_title {
+  font-variation-settings: "wght" var(--title-font-weight, 700);
+  font-size: 18px;
+  line-height: 21.78px;
+}
+
+.card__image_wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.label__wrapper {
+  position: absolute;
+  top: 27px;
+  right: 23px;
+  font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
+  font-size: 14px;
+  line-height: normal;
+  opacity: 0.5;
+  text-transform: uppercase;
+  text-shadow: 0 0 1px #fff;
+  mix-blend-mode: hard-light;
+}
+
+.card_image {
+  display: block;
+  inline-size: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.card__content {
+display: grid;
+gap: 27px;
+padding: 30px 25px 25px;
+border-block-start: 2px solid #000;
+font-size: 18px;
+line-height: 21px;
+}
+
+.card__footer {
+  display: flex;
+  justify-content: end;
+}
+
+.card__icon-button {
+display: grid;
+border: 2px solid transparent;
+padding-inline-end: 3px;
+cursor: pointer;
+background-color: transparent;
+appearance: none;
+
+}
+
+.button {
+position: relative;
+border: 2px solid #000;
+background-color: inherit;
+padding: 10px 36px;
+margin-inline-end: 22px;
+margin-block-end: 25px;
+cursor: pointer;
+font-size: 14px;
+font-family: var(--page-accent-font-family, "PressStart2P", fantasy );
+text-transform: inherit;
+text-align: center;
+}
+
+.button__icon {
+  block-size: 22px;
+  inline-size: 22px;
+}
+
+
+@supports (-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff) {
+  .label__wrapper {
+    text-shadow: none;
+    -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px #fff;
+  }
 }
