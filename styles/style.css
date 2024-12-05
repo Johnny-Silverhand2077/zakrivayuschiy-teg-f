@@ -20,6 +20,7 @@
   background-color: var(--page-background-color, #fff);
   background-image: var(--page-background-image, none);
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .header {
@@ -29,6 +30,7 @@
   font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
   line-height: normal;
   text-transform: uppercase;
+  gap: 20px;
 }
 
 .page_header {
@@ -47,11 +49,12 @@
   gap: 20px;
   text-align: center;
   font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
-  margin-block: clamp(7.5rem, 7.324rem + 0.751vw, 8rem);
+  margin-block-start: clamp(7.5rem, 7.324rem + 0.751vw, 8rem);
 }
 
 .header_subtitle {
   font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
+  margin-block-end: clamp(7.5rem, 7.324rem + 0.751vw, 8rem);
 }
 
 .main {
@@ -268,6 +271,12 @@
 }
 /* Добавить стили анимации  */
 @media (width <=420px) {
+
+  .label__wrapper {
+    top: 22px;
+    right: 11px;
+  }
+
   .button__save {
     flex-direction: column;
   }
@@ -281,6 +290,7 @@
     padding: 30px 40px;
     max-inline-size: 340px
   }
+
 }
 
 @supports (-webkit-text-stroke: 1px var(--page-background-color, #fff)) or
