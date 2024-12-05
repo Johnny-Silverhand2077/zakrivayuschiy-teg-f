@@ -1,0 +1,1 @@
+Мой репощиторый https://github.com/Johnny-Silverhand2077/zakrivayuschiy-teg-f
